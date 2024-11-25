@@ -1,0 +1,233 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #000000, #494842);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+header .header-content {
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    font-size: 50px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 20px;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation */
+nav {
+    background-color: #7b7e80;
+    text-align: center;
+    padding: 12px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+nav a:hover {
+    background-color: #dce0df;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Notification */
+.notification {
+    background-color: #14120f;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Home Section */
+section#home {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+section#home h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+section#home p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* Parallax effect for product section */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.product {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    width: 270px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.product img:hover {
+    transform: scale(1.05);
+}
+
+.product h3 {
+    font-size: 22px;
+    color: #333;
+    margin-top: 15px;
+}
+
+.product p {
+    color: #e74c3c;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product button {
+    background-color: #000000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.product button:hover {
+    background-color: #404443;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+section#contact {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+section#contact h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+section#contact p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Blog Section */
+section#blog {
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 40px;
+    background-color: white;
+}
+
+section#blog h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+section#blog p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Scroll Animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+section#home, section#contact, section#blog {
+    animation: slideIn 1s ease-out;
+}
